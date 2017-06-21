@@ -1,0 +1,7 @@
+﻿CREATE TABLE [Shop]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] NVARCHAR(MAX) NOT NULL, 
+    [Created] DATETIME NOT NULL, 
+    [Updated] DATETIME NOT NULL
+)
