@@ -24,5 +24,16 @@ namespace WPFClient
         {
             InitializeComponent();
         }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void dataGridDistrict_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            dataGridDistrict.ItemsSource = 
+        }
     }
 }

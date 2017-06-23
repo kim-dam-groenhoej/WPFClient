@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="600" Width="900">
+    <Grid Margin="0,0,-98,-69">
+        <DataGrid x:Name="dataGridDistrict" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="500" Width="870" SelectionChanged="dataGrid_SelectionChanged" Loaded="dataGridDistrict_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="100"/>
+                <DataGridTextColumn Header="Name" Width="300" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
