@@ -14,6 +14,7 @@ namespace NeasEnergy.Core.DataLayer
         public abstract IList<ISeller> GetAll();
 
         public abstract IList<ISeller> GetByDistrict(int districtId);
+        public abstract IList<ISeller> GetByNotInDistrict(int districtId);
 
         public abstract bool Update(int id, string name, string phone, string email);
 

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using NeasEnergy.Core.Client;
+using NeasEnergy.Core.Client.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,20 +23,11 @@ namespace WPFClient
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void dataGridDistrict_Loaded(object sender, RoutedEventArgs e)
-        {
-
-            dataGridDistrict.ItemsSource = 
-        }
     }
 }

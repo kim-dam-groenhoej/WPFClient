@@ -27,5 +27,10 @@ namespace NeasEnergy.Core.Models
         {
             get; set;
         }
+
+        public bool IsPrimary
+        {
+            get; set;
+        }
     }
 }

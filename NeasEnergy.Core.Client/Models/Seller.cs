@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Models
+namespace NeasEnergy.Core.Client.Models
 {
-    public class Shop : IShop
+    public class Seller : ISeller
     {
         public int Id
         {
@@ -14,6 +14,11 @@ namespace NeasEnergy.Core.Models
         }
 
         public DateTime Created
+        {
+            get;set;
+        }
+
+        public string Email
         {
             get; set;
         }
@@ -23,7 +28,17 @@ namespace NeasEnergy.Core.Models
             get; set;
         }
 
+        public string Phone
+        {
+            get; set;
+        }
+
         public DateTime Updated
+        {
+            get; set;
+        }
+
+        public bool IsPrimary
         {
             get; set;
         }

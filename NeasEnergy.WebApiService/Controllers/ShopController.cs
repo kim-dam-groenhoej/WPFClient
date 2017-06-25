@@ -1,4 +1,7 @@
-﻿using System;
+﻿using NeasEnergy.Core.DataLayer;
+using NeasEnergy.Core.DataLayer.Providers;
+using NeasEnergy.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,31 +12,21 @@ namespace NeasEnergy.WebApiService.Controllers
 {
     public class ShopController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        private ShopDataAccess shopDataAccess;
+
+        public ShopController()
         {
-            return new string[] { "value1", "value2" };
+            this.shopDataAccess = DataProviderManager.GetShop(DataProvider.MsSql);
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">DistrictID</param>
+        /// <returns></returns>
+        public IEnumerable<IShop> Get(int id)
         {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            return this.shopDataAccess.GetByDistrict(id);
         }
     }
 }

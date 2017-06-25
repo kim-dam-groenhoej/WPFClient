@@ -29,7 +29,15 @@ namespace NeasEnergy.Core.DataLayer.Providers.MsSql
         {
             using (var db = new NeasEnergyEntities1())
             {
-                return db.Database.SqlQuery<Seller>("SELECT S.Id, S.name, S.phone, s.email, S.Created, S.Updated FROM [Seller] S INNER JOIN [DistrictSeller] ds ON S.Id = ds.SellerId WHERE ds.DistrictId = @DistrictId", new SqlParameter("DistrictId", districtId)).ToList<ISeller>();
+                return db.Database.SqlQuery<Seller>("SELECT S.Id, S.name, S.phone, s.email, S.Created, S.Updated, ds.IsPrimary FROM [Seller] S INNER JOIN [DistrictSeller] ds ON S.Id = ds.SellerId WHERE ds.DistrictId = @DistrictId", new SqlParameter("DistrictId", districtId)).ToList<ISeller>();
+            }
+        }
+
+        public override IList<ISeller> GetByNotInDistrict(int districtId)
+        {
+            using (var db = new NeasEnergyEntities1())
+            {
+                return db.Database.SqlQuery<Seller>("SELECT S.Id, S.name, S.phone, s.email, S.Created, S.Updated, CASE WHEN ds.IsPrimary IS NULL THEN CAST(1 AS BIT) ELSE ds.IsPrimary END AS IsPrimary FROM [Seller] S LEFT JOIN  [DistrictSeller] ds ON S.Id = ds.SellerId WHERE (ds.DistrictId <> @DistrictId OR ds.DistrictId IS NULL) AND S.ID NOT IN (SELECT S.Id FROM [Seller] S LEFT JOIN  [DistrictSeller] ds ON S.Id = ds.SellerId WHERE ds.DistrictId = @DistrictId)", new SqlParameter("DistrictId", districtId)).ToList<ISeller>();
             }
         }
 

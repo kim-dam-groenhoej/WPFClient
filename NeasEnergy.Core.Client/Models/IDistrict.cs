@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Models
+namespace NeasEnergy.Core.Client.Models
 {
-    public interface IDistrictSeller
+    public interface IDistrict
     {
-        int DistrictId { get; set; }
+        int Id { get; set; }
 
-        int SellerId { get; set; }
-
+        string Name { get; set; }
         DateTime Created { get; set; }
 
         DateTime Updated { get; set; }
-        bool IsPrimary { get; set; }
     }
 }

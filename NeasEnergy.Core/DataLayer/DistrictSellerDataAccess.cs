@@ -17,8 +17,10 @@ namespace NeasEnergy.Core.DataLayer
 
         public abstract IList<IDistrictSeller> GetBySeller(int sellerid);
 
-        public abstract int Insert(int sellerId, int districtId, bool isPrimary);
+        public abstract bool Insert(int sellerId, int districtId, bool isPrimary);
 
-        public abstract bool Delete(int id);
+        public abstract bool Update(int sellerId, int districtId, bool isPrimary);
+
+        public abstract bool Delete(int sellerId, int districtId);
     }
 }

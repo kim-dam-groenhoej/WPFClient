@@ -8,6 +8,11 @@ namespace NeasEnergy.Core.Models
 {
     public class Seller : ISeller
     {
+        public int Id
+        {
+            get; set;
+        }
+
         public DateTime Created
         {
             get;set;
@@ -24,6 +29,11 @@ namespace NeasEnergy.Core.Models
         }
 
         public string Phone
+        {
+            get; set;
+        }
+
+        public bool IsPrimary
         {
             get; set;
         }

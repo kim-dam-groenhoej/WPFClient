@@ -43,15 +43,15 @@ namespace NeasEnergy.Core.DataLayer.Providers
             return null;
         }
 
-        //public static DistrictSellerDataAccess GetDistrictSeller(DataProvider provider)
-        //{
-        //    switch (provider)
-        //    {
-        //        case DataProvider.MsSql:
-        //            return new MsSqlCompanyDataAccess();
-        //    }
+        public static DistrictSellerDataAccess GetDistrictSeller(DataProvider provider)
+        {
+            switch (provider)
+            {
+                case DataProvider.MsSql:
+                    return new MsSqlDistrictSellerDataAccess();
+            }
 
-        //    return null;
-        //}
+            return null;
+        }
     }
 }

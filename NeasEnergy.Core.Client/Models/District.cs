@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Models
+namespace NeasEnergy.Core.Client.Models
 {
-    public class Shop : IShop
+    public class District : IDistrict
     {
         public int Id
         {

@@ -1,5 +1,6 @@
 USE master;
 IF EXISTS(select * from sys.databases where name='NeasEnergy')
+alter database NeasEnergy set single_user with rollback immediate
 DROP DATABASE NeasEnergy;
 
 CREATE DATABASE NeasEnergy;
@@ -23,7 +24,7 @@ CREATE TABLE [District]
     [Updated] DATETIME NOT NULL DEFAULT  GETDATE()
 );
 
-CREATE TABLE [ShopDistrict]
+CREATE TABLE [DistrictShop]
 (
     [Created] DATETIME NOT NULL DEFAULT  GETDATE(), 
     [Updated] DATETIME NOT NULL DEFAULT  GETDATE(), 
@@ -76,15 +77,16 @@ GO
 CREATE PROCEDURE UpdateDistrictSeller
 (
 @sellerId int,                
-@isPrimary int,
+@isPrimary bit,
 @districtId int
 )
 AS
 BEGIN
-	DECLARE @count INT = (SELECT COUNT(isPrimary) FROM [DistrictSeller] WHERE isPrimary = 1);
-	IF (@count = 1 AND @isPrimary = 0)
+	DECLARE @count INT = (SELECT COUNT(isPrimary) FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId);
+	DECLARE @districtSellerId INT = (SELECT SellerId FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId AND sellerId = @sellerId);
+	IF (@count = 1 AND @isPrimary = 0 AND @districtSellerId = @sellerId)
 		RAISERROR('There must be a primary seller in district',16,1);
-	ELSE IF (@count > 1)
+	ELSE IF (@count > 0)
 		UPDATE [DistrictSeller] SET [IsPrimary] = @isPrimary  WHERE [DistrictId] = @districtId AND [SellerId] = @sellerId;
 END
 
@@ -97,10 +99,11 @@ CREATE PROCEDURE DeleteDistrictSeller
 )
 AS
 BEGIN
-	DECLARE @count INT = (SELECT COUNT(isPrimary) FROM [DistrictSeller] WHERE isPrimary = 1);
-	IF (@count = 1)
+	DECLARE @count INT = (SELECT COUNT(isPrimary) FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId);
+	DECLARE @districtSellerId INT = (SELECT SellerId FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId AND @sellerId = @sellerId);
+	IF (@count = 1 AND @districtSellerId = @sellerId)
 		RAISERROR('There must be a primary seller in district',16,1);
-	ELSE IF (@count > 1)
+	ELSE IF (@count > 0)
 		DELETE [DistrictSeller] WHERE [DistrictId] = @districtId AND [SellerId] = @sellerId;
 END
 

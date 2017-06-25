@@ -8,6 +8,11 @@ namespace NeasEnergy.Core.Models
 {
     public class District : IDistrict
     {
+        public int Id
+        {
+            get; set;
+        }
+
         public DateTime Created
         {
             get; set;

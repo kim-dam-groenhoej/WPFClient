@@ -9,7 +9,6 @@ namespace NeasEnergy.Core.DataLayer.Providers
     public enum DataProvider
     {
         MsSql,
-        WebService,
-        Mysql
+        WebService
     }
 }

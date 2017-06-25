@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Models
+namespace NeasEnergy.Core.Client.Models
 {
     public interface IDistrictSeller
     {
@@ -15,6 +15,5 @@ namespace NeasEnergy.Core.Models
         DateTime Created { get; set; }
 
         DateTime Updated { get; set; }
-        bool IsPrimary { get; set; }
     }
 }

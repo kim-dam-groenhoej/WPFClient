@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="NeasEnergy.WPFClient.DistrictsGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NeasEnergy.WPFClient"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="860">
+    <Grid>
+        <DataGrid x:Name="dataGridDistrict" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="500" Width="860" Loaded="dataGridDistrict_Loaded" SelectionChanged="dataGridDistrict_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Navn" FontWeight="Bold" Binding="{Binding Name}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Canvas Name="LoadingCanvas">
+            <Image Name="Loading" HorizontalAlignment="Center"   Source="./spin.gif" Width="100" Height="100" VerticalAlignment="Center" />
+        </Canvas>
+        
+    </Grid>
+</UserControl>

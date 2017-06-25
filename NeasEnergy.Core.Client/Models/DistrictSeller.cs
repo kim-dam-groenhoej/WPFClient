@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Models
+namespace NeasEnergy.Core.Client.Models
 {
-    public class Shop : IShop
+    public class DistrictSeller : IDistrictSeller
     {
-        public int Id
-        {
-            get; set;
-        }
-
         public DateTime Created
         {
+            get;set;
+        }
+
+        public int DistrictId
+        {
             get; set;
         }
 
-        public string Name
+        public int SellerId
         {
             get; set;
         }
