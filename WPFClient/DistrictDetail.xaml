@@ -28,7 +28,7 @@
                         <DataGridTemplateColumn Header="Chk" Width="50">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox Width="50" Height="20"  IsChecked="{Binding Path=IsPrimary,UpdateSourceTrigger=PropertyChanged}" Name="ChkSelect" Click="ChkSelect_Click" KeyDown="ChkSelect_KeyDown"/>
+                                    <CheckBox Width="50" Height="20"  IsChecked="{Binding Path=IsPrimary,UpdateSourceTrigger=PropertyChanged}" Name="ChkSelect" Click="ChkSelect_Click" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                             <DataGridTemplateColumn.CellEditingTemplate>
