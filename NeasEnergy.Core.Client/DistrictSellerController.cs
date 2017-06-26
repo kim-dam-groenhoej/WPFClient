@@ -31,8 +31,10 @@ namespace NeasEnergy.Core.Client
             {
                 return true;
             }
-
-            return false;
+            else
+            {
+                throw new ServiceException(response.Content.ReadAsStringAsync().Result);
+            }
         }
 
         public static async Task<bool> DeleteAsync(int sellerId, int districtId)
@@ -73,8 +75,10 @@ namespace NeasEnergy.Core.Client
             {
                 return true;
             }
-
-            return false;
+            else
+            {
+                throw new ServiceException(response.Content.ReadAsStringAsync().Result);
+            }
         }
     }
 }

@@ -175,6 +175,8 @@ namespace NeasEnergy.WPFClient
                 {
                     MessageBox.Show(string.Format("Der opstod en fejl: {0}", ex.Message));
                 }
+
+                ((CheckBox)e.Source).IsChecked = true;
             }
         }
     }

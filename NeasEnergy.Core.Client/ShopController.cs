@@ -23,6 +23,7 @@ namespace NeasEnergy.Core.Client
             {
                 shop = await response.Content.ReadAsAsync<Shop>();
             }
+
             return shop;
         }
 
