@@ -66,22 +66,26 @@ namespace NeasEnergy.WPFClient
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            // Get key from selected seller
             var seletecd = (KeyValuePair<int, string>)comboBoxSellers.SelectedValue;
             var selectedItem = sellers.FirstOrDefault(i => i.Id == seletecd.Key);
+
             if (selectedItem != null)
             {
-                var result = DistrictSellerController.InsertAsync(selectedItem.Id, district.Id, false).Result;
+                var isSuccess = DistrictSellerController.InsertAsync(selectedItem.Id, district.Id, false).Result;
 
-                if (result)
+                if (isSuccess)
                 {
                     districtDetail.Dispatcher.Invoke(new Action(() => {
+                        // Reload seller grid
                         districtDetail.UpdateSellersGrid();
                     }));
 
                     MessageBox.Show(string.Format("Sælger '{0}' er tilknyttet", selectedItem.Name));
+
+                    // Close Window
                     ((Window)this.Parent).Close();
-                } else
-                {
+                } else {
                     MessageBox.Show("Der opstod en fejl");
                 }
             }

@@ -26,15 +26,12 @@ namespace NeasEnergy.Core.Client
             };
 
             var response = await client.PostAsJsonAsync("/api/districtseller", model).ConfigureAwait(false); // fix deadlock
-
-            if (response.IsSuccessStatusCode)
-            {
-                return true;
-            }
-            else
+            if (!response.IsSuccessStatusCode)
             {
                 throw new ServiceException(response.Content.ReadAsStringAsync().Result);
             }
+
+            return true;
         }
 
         public static async Task<bool> DeleteAsync(int sellerId, int districtId)
@@ -48,14 +45,12 @@ namespace NeasEnergy.Core.Client
             };
 
             var response = await client.DeleteAsync(string.Format("/api/districtseller/?sellerId={0}&districtId={1}", sellerId, districtId)).ConfigureAwait(false); // fix deadlock
-
-            if (response.IsSuccessStatusCode)
-            {
-                return true;
-            } else
+            if (!response.IsSuccessStatusCode)
             {
                 throw new ServiceException(response.Content.ReadAsStringAsync().Result);
             }
+
+            return true;
         }
 
         public static async Task<bool> UpdateAsync(int sellerId, int districtId, bool isPrimary)
@@ -71,14 +66,12 @@ namespace NeasEnergy.Core.Client
 
             var response = await client.PutAsJsonAsync("/api/districtseller", model).ConfigureAwait(false); // fix deadlock
 
-            if (response.IsSuccessStatusCode)
-            {
-                return true;
-            }
-            else
+            if (!response.IsSuccessStatusCode)
             {
                 throw new ServiceException(response.Content.ReadAsStringAsync().Result);
             }
+
+            return true;
         }
     }
 }

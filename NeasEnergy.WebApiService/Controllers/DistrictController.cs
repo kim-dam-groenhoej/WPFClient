@@ -14,16 +14,15 @@ namespace NeasEnergy.WebApiService.Controllers
     public class DistrictController : ApiController
     {
         private DistrictDataAccess districtDataAccess;
+
         public DistrictController()
         {
             this.districtDataAccess = DataProviderManager.GetDistrict(DataProvider.MsSql);
         }
 
-        // GET api/values
         public IEnumerable<IDistrict> Get()
         {
             return districtDataAccess.GetAll();
         }
-
     }
 }

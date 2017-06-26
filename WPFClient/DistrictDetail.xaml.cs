@@ -105,12 +105,11 @@ namespace NeasEnergy.WPFClient
                 if (seletecdItem != null)
                 {
                     var seller = (ISeller)seletecdItem;
+                    var isSuccess = DistrictSellerController.DeleteAsync(seller.Id, district.Id).Result;
 
-
-                    var result = DistrictSellerController.DeleteAsync(seller.Id, district.Id).Result;
-
-                    if (result)
+                    if (isSuccess)
                     {
+                        // Reload seller grid
                         this.UpdateSellersGrid();
                         MessageBox.Show(string.Format("Sælger '{0}' er slettet", seller.Name));
                     }
@@ -129,6 +128,7 @@ namespace NeasEnergy.WPFClient
 
         private void BtnAddSeller_Click(object sender, RoutedEventArgs e)
         {
+            // center window info
             double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
             double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
             double windowWidth = this.Width;
@@ -154,13 +154,16 @@ namespace NeasEnergy.WPFClient
                 if (seletecdItem != null)
                 {
                     var seller = (ISeller)seletecdItem;
+                    // Convert to bool - no value then false
                     bool isChecked = ((CheckBox)e.Source).IsChecked.HasValue ? ((CheckBox)e.Source).IsChecked.Value : false;
 
-                    var result = DistrictSellerController.UpdateAsync(seller.Id, district.Id, isChecked).Result;
+                    var isSuccess = DistrictSellerController.UpdateAsync(seller.Id, district.Id, isChecked).Result;
 
-                    if (result)
+                    if (isSuccess)
                     {
-                        this.UpdateSellersGrid();
+                        // Reload seller grid
+                        this.UpdateSellersGrid(); 
+
                         MessageBox.Show(string.Format("Sælger '{0}' er opdateret", seller.Name));
                     }
                 }

@@ -30,10 +30,9 @@ namespace NeasEnergy.Core.Client
         public static async Task<IEnumerable<IShop>> GetByDistrictAsync(int districtId)
         {
             SetInformation();
-
             IEnumerable<IShop> shops = new List<IShop>();
-            var response = await client.GetAsync(string.Format("/api/shop/{0}", districtId)).ConfigureAwait(false); // fix deadlock
 
+            var response = await client.GetAsync(string.Format("/api/shop/{0}", districtId)).ConfigureAwait(false); // fix deadlock
             if (response.IsSuccessStatusCode)
             {
                 var formatters = new List<MediaTypeFormatter>() {
@@ -41,8 +40,7 @@ namespace NeasEnergy.Core.Client
                     new XmlMediaTypeFormatter()
                 };
 
-                var result = await response.Content.ReadAsAsync<IEnumerable<Shop>>(formatters);
-                shops = result;
+                shops = await response.Content.ReadAsAsync<IEnumerable<Shop>>(formatters);
             }
             else
             {

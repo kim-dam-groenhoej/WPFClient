@@ -99,8 +99,8 @@ CREATE PROCEDURE DeleteDistrictSeller
 )
 AS
 BEGIN
-	DECLARE @count INT = (SELECT COUNT(isPrimary) FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId);
-	DECLARE @districtSellerId INT = (SELECT SellerId FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId AND @sellerId = @sellerId);
+	DECLARE @count INT = (SELECT COUNT(*) FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId);
+	DECLARE @districtSellerId INT = (SELECT SellerId FROM [DistrictSeller] WHERE isPrimary = 1 AND DistrictId = @districtId AND [SellerId] = @sellerId);
 	IF (@count = 1 AND @districtSellerId = @sellerId)
 		RAISERROR('There must be a primary seller in district',16,1);
 	ELSE IF (@count > 0)

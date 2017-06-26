@@ -31,11 +31,11 @@ namespace NeasEnergy.WPFClient
         {
             InitializeComponent();
 
-            double left = (LoadingCanvas.ActualWidth - Loading.ActualWidth) / 2;
-            Canvas.SetLeft(LoadingCanvas, left);
+            //double left = (LoadingCanvas.ActualWidth - Loading.ActualWidth) / 2;
+            //Canvas.SetLeft(LoadingCanvas, left);
 
-            double top = (LoadingCanvas.ActualHeight - Loading.ActualHeight) / 2;
-            Canvas.SetTop(LoadingCanvas, top);
+            //double top = (LoadingCanvas.ActualHeight - Loading.ActualHeight) / 2;
+            //Canvas.SetTop(LoadingCanvas, top);
         }
 
         private void dataGridDistrict_Loaded(object sender, RoutedEventArgs e)
@@ -57,7 +57,7 @@ namespace NeasEnergy.WPFClient
             this.Dispatcher.Invoke(() =>
             {
                 dataGridDistrict.ItemsSource = this.districts;
-                Loading.Visibility = Visibility.Hidden;
+                //Loading.Visibility = Visibility.Hidden;
             });
         }
 
@@ -69,7 +69,7 @@ namespace NeasEnergy.WPFClient
             {
                 var district = (IDistrict)seletecdItem;
 
-                this.IsEnabled = true;
+                //this.IsEnabled = true;
 
                 // Open new window with district data
                 this.districtDetailWindow = new Window();
@@ -84,7 +84,7 @@ namespace NeasEnergy.WPFClient
 
         private void districtDetailWindow_closing(object sender, CancelEventArgs e)
         {
-            this.IsEnabled = true;
+            //this.IsEnabled = true;
             dataGridDistrict.UnselectAll();
         }
     }

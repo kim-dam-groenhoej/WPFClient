@@ -39,10 +39,9 @@ namespace NeasEnergy.Core.Client
         public static async Task<IEnumerable<ISeller>> GetByNotInDistrictAsync(int districtId)
         {
             SetInformation();
-
             IEnumerable<ISeller> sellers = new List<ISeller>();
-            var response = await client.GetAsync(string.Format("/api/Seller/NotInDistrict/?id={0}", districtId)).ConfigureAwait(false); // fix deadlock
 
+            var response = await client.GetAsync(string.Format("/api/Seller/NotInDistrict/?id={0}", districtId)).ConfigureAwait(false); // fix deadlock
             if (response.IsSuccessStatusCode)
             {
                 var formatters = new List<MediaTypeFormatter>() {
@@ -50,8 +49,7 @@ namespace NeasEnergy.Core.Client
                     new XmlMediaTypeFormatter()
                 };
 
-                var result = await response.Content.ReadAsAsync<IEnumerable<Seller>>(formatters);
-                sellers = result;
+                sellers = await response.Content.ReadAsAsync<IEnumerable<Seller>>(formatters);
             }
             else
             {

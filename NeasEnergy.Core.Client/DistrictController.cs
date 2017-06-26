@@ -15,10 +15,9 @@ namespace NeasEnergy.Core.Client
         public static async Task<IEnumerable<IDistrict>> GetAsync()
         {
             SetInformation();
-
             IEnumerable<IDistrict> districts = new List<District>();
-            var response = await client.GetAsync("/api/district").ConfigureAwait(false); // fix deadlock
 
+            var response = await client.GetAsync("/api/district").ConfigureAwait(false); // fix deadlock
             if (response.IsSuccessStatusCode)
             {
                 var formatters = new List<MediaTypeFormatter>() {
@@ -26,8 +25,7 @@ namespace NeasEnergy.Core.Client
                     new XmlMediaTypeFormatter()
                 };
 
-                var result = await response.Content.ReadAsAsync<IEnumerable<District>>(formatters);
-                districts = result;
+                districts = await response.Content.ReadAsAsync<IEnumerable<District>>(formatters);
             } else {
                 throw new ServiceException(string.Format("Error loading sellers - statuscode {0}", response.StatusCode));
             }

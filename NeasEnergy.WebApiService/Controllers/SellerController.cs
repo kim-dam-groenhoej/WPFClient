@@ -19,8 +19,9 @@ namespace NeasEnergy.WebApiService.Controllers
         {
             this.sellerDataAccess = DataProviderManager.GetSeller(DataProvider.MsSql);
         }
+
         /// <summary>
-        /// 
+        /// Get all sellers by district
         /// </summary>
         /// <param name="id">DistrictID</param>
         /// <returns></returns>
@@ -30,6 +31,11 @@ namespace NeasEnergy.WebApiService.Controllers
             return this.sellerDataAccess.GetByDistrict(id);
         }
 
+        /// <summary>
+        /// Get all sellers is not in district
+        /// </summary>
+        /// <param name="id">DistrictID</param>
+        /// <returns></returns>
         [Route("NotInDistrict")]
         public IEnumerable<ISeller> GetByNotInDistrict(int id)
         {
