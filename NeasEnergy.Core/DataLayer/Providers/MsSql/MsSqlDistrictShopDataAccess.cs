@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NeasEnergy.Core.Models;
+using TestCompany.Core.Models;
 
-namespace NeasEnergy.Core.DataLayer.Providers.MsSql
+namespace TestCompany.Core.DataLayer.Providers.MsSql
 {
     public class MsSqlDistrictShopDataAccess : DistrictShopDataAccess
     {

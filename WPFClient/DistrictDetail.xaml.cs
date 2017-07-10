@@ -1,6 +1,6 @@
-﻿using NeasEnergy.Core.Client;
-using NeasEnergy.Core.Client.Exceptions;
-using NeasEnergy.Core.Client.Models;
+﻿using TestCompany.Core.Client;
+using TestCompany.Core.Client.Exceptions;
+using TestCompany.Core.Client.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NeasEnergy.WPFClient
+namespace TestCompany.WPFClient
 {
     /// <summary>
     /// Interaction logic for DistrictDetail.xaml
@@ -136,7 +136,7 @@ namespace NeasEnergy.WPFClient
 
             // Open new window with district data
             this.districtDetailSellerAddWindow = new Window();
-            this.districtDetailSellerAddWindow.Title = string.Format("NeasEnergy Manager - {0}: Tilknyt sælger", district.Name);
+            this.districtDetailSellerAddWindow.Title = string.Format("TestCompany Manager - {0}: Tilknyt sælger", district.Name);
             this.districtDetailSellerAddWindow.Width = 250;
             this.districtDetailSellerAddWindow.Content = new DistrictSellerAdd(district, this); // Instance of usercontrol for district detail Window
             this.districtDetailSellerAddWindow.Height = 140;

@@ -1,5 +1,5 @@
-﻿using NeasEnergy.Core.Client.Exceptions;
-using NeasEnergy.Core.Client.Models;
+﻿using TestCompany.Core.Client.Exceptions;
+using TestCompany.Core.Client.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Client
+namespace TestCompany.Core.Client
 {
     public class DistrictSellerController : BaseController
     {

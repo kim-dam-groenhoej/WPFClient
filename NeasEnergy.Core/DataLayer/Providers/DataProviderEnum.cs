@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.DataLayer.Providers
+namespace TestCompany.Core.DataLayer.Providers
 {
     public enum DataProvider
     {

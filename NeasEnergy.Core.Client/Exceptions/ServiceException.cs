@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Client.Exceptions
+namespace TestCompany.Core.Client.Exceptions
 {
     public class ServiceException : Exception
     {

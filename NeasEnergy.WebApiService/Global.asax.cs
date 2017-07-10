@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace NeasEnergy.WebApiService
+namespace TestCompany.WebApiService
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

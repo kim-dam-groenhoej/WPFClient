@@ -6,10 +6,13 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeasEnergy.Core.Client
+namespace TestCompany.Core.Client
 {
     public class BaseController
     {
+        /// <summary>
+        /// Use same httpclient instance in hold application to reduce tcp connections, memory and CPU
+        /// </summary>
         protected static HttpClient client = new HttpClient();
 
         protected static void SetInformation()

@@ -1,6 +1,6 @@
-﻿using NeasEnergy.Core.DataLayer;
-using NeasEnergy.Core.DataLayer.Providers;
-using NeasEnergy.Core.Models;
+﻿using TestCompany.Core.DataLayer;
+using TestCompany.Core.DataLayer.Providers;
+using TestCompany.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace NeasEnergy.WebApiService.Controllers
+namespace TestCompany.WebApiService.Controllers
 {
     [RoutePrefix("api/Seller")]
     public class SellerController : ApiController

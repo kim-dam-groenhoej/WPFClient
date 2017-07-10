@@ -1,12 +1,12 @@
 ﻿<Window x:Class="WPFClient.MainWindow"
-        xmlns:my="clr-namespace:NeasEnergy.WPFClient"
+        xmlns:my="clr-namespace:TestCompany.WPFClient"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFClient"
         mc:Ignorable="d"
-        Title="NeasEnergy Manager" Height="650" Width="900">
+        Title="TestCompany Manager" Height="650" Width="900">
     <Grid Margin="0,0,-98,-69">
         <Label FontWeight="Bold" Margin="3,6,-3,-6" FontSize="18">Distrikter</Label>
         <my:DistrictsGrid x:Name="districtGrid" x:Uid="districtGrid" Margin="0,37,0,-37"></my:DistrictsGrid>

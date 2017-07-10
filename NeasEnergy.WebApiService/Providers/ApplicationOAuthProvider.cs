@@ -9,9 +9,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using NeasEnergy.WebApiService.Models;
+using TestCompany.WebApiService.Models;
 
-namespace NeasEnergy.WebApiService.Providers
+namespace TestCompany.WebApiService.Providers
 {
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {

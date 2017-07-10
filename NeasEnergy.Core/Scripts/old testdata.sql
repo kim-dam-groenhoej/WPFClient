@@ -1,4 +1,4 @@
-use NeasEnergy;
+use TestCompany;
 
 INSERT INTO [Company] (Name) VALUES ('Bilka');
 DECLARE @CompanyId INT = SCOPE_IDENTITY();

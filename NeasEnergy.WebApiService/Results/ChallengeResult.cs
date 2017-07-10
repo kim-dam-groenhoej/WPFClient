@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace NeasEnergy.WebApiService.Results
+namespace TestCompany.WebApiService.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

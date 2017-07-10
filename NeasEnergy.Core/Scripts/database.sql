@@ -1,12 +1,12 @@
 USE master;
-IF EXISTS(select * from sys.databases where name='NeasEnergy')
-alter database NeasEnergy set single_user with rollback immediate
-DROP DATABASE NeasEnergy;
+IF EXISTS(select * from sys.databases where name='TestCompany')
+alter database TestCompany set single_user with rollback immediate
+DROP DATABASE TestCompany;
 
-CREATE DATABASE NeasEnergy;
+CREATE DATABASE TestCompany;
 GO
 
-USE NeasEnergy;
+USE TestCompany;
 
 CREATE TABLE [Shop]
 (

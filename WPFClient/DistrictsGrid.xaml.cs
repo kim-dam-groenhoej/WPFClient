@@ -1,5 +1,5 @@
-﻿using NeasEnergy.Core.Client;
-using NeasEnergy.Core.Client.Models;
+﻿using TestCompany.Core.Client;
+using TestCompany.Core.Client.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NeasEnergy.WPFClient
+namespace TestCompany.WPFClient
 {
     /// <summary>
     /// Interaction logic for DistrictsGrid.xaml
@@ -73,7 +73,7 @@ namespace NeasEnergy.WPFClient
 
                 // Open new window with district data
                 this.districtDetailWindow = new Window();
-                this.districtDetailWindow.Title = string.Format("NeasEnergy Manager - {0}", district.Name);
+                this.districtDetailWindow.Title = string.Format("TestCompany Manager - {0}", district.Name);
                 this.districtDetailWindow.Width = 870;
                 this.districtDetailWindow.Content = new DistrictDetail(district); // Instance of usercontrol for district detail Window
                 this.districtDetailWindow.Height = 340;

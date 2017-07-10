@@ -1,5 +1,5 @@
-﻿using NeasEnergy.Core.Client;
-using NeasEnergy.Core.Client.Models;
+﻿using TestCompany.Core.Client;
+using TestCompany.Core.Client.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NeasEnergy.WPFClient
+namespace TestCompany.WPFClient
 {
     /// <summary>
     /// Interaction logic for DistrictSellerAdd.xaml

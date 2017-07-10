@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NeasEnergy.WebApiService.Models
+namespace TestCompany.WebApiService.Models
 {
     // Models returned by AccountController actions.
 

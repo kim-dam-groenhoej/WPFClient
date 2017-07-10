@@ -6,7 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 
-namespace NeasEnergy.WebApiService
+namespace TestCompany.WebApiService
 {
     public static class WebApiConfig
     {

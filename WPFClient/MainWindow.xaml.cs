@@ -1,5 +1,5 @@
-﻿using NeasEnergy.Core.Client;
-using NeasEnergy.Core.Client.Models;
+﻿using TestCompany.Core.Client;
+using TestCompany.Core.Client.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

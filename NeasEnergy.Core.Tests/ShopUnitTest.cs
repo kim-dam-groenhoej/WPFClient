@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NeasEnergy.Core.DataLayer.Providers;
-using NeasEnergy.Core.DataLayer;
+using TestCompany.Core.DataLayer.Providers;
+using TestCompany.Core.DataLayer;
 
-namespace NeasEnergy.Core.Tests
+namespace TestCompany.Core.Tests
 {
     [TestClass]
     public class ShopUnitTest

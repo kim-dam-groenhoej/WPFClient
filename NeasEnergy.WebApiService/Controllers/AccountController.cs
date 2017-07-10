@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using NeasEnergy.WebApiService.Models;
-using NeasEnergy.WebApiService.Providers;
-using NeasEnergy.WebApiService.Results;
+using TestCompany.WebApiService.Models;
+using TestCompany.WebApiService.Providers;
+using TestCompany.WebApiService.Results;
 
-namespace NeasEnergy.WebApiService.Controllers
+namespace TestCompany.WebApiService.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

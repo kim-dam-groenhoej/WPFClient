@@ -3,26 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.WPFClient", "WPFClient\NeasEnergy.WPFClient.csproj", "{EDE2CD68-9D86-46C5-8583-C79DF6184C59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WPFClient", "WPFClient\TestCompany.WPFClient.csproj", "{EDE2CD68-9D86-46C5-8583-C79DF6184C59}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B11047FB-A056-45E1-954C-5F7A22EA3101} = {B11047FB-A056-45E1-954C-5F7A22EA3101}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.AngularClient", "AngularClient\NeasEnergy.AngularClient.csproj", "{0549C808-9D24-42F9-AFD1-93DE702E28EB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A0008720-9C7D-4DD3-85A9-7A62D188B352} = {A0008720-9C7D-4DD3-85A9-7A62D188B352}
-		{B11047FB-A056-45E1-954C-5F7A22EA3101} = {B11047FB-A056-45E1-954C-5F7A22EA3101}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core", "NeasEnergy.Core\TestCompany.Core.csproj", "{56971B23-23B4-4D33-9481-4C0E11F850AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.Core", "NeasEnergy.Core\NeasEnergy.Core.csproj", "{56971B23-23B4-4D33-9481-4C0E11F850AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core.Tests", "NeasEnergy.Core.Tests\TestCompany.Core.Tests.csproj", "{EB6E126D-5A6D-47B3-A42F-AE918A352789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.Core.Tests", "NeasEnergy.Core.Tests\NeasEnergy.Core.Tests.csproj", "{EB6E126D-5A6D-47B3-A42F-AE918A352789}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WebApiService", "NeasEnergy.WebApiService\TestCompany.WebApiService.csproj", "{B11047FB-A056-45E1-954C-5F7A22EA3101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.WebApiService", "NeasEnergy.WebApiService\NeasEnergy.WebApiService.csproj", "{B11047FB-A056-45E1-954C-5F7A22EA3101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WebApiService.Tests", "NeasEnergy.WebApiService.Tests\TestCompany.WebApiService.Tests.csproj", "{E52F24C9-3DE8-44EC-92C0-81EA5A8862B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.WebApiService.Tests", "NeasEnergy.WebApiService.Tests\NeasEnergy.WebApiService.Tests.csproj", "{E52F24C9-3DE8-44EC-92C0-81EA5A8862B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core.Client", "NeasEnergy.Core.Client\TestCompany.Core.Client.csproj", "{A0008720-9C7D-4DD3-85A9-7A62D188B352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeasEnergy.Core.Client", "NeasEnergy.Core.Client\NeasEnergy.Core.Client.csproj", "{A0008720-9C7D-4DD3-85A9-7A62D188B352}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.AngularClient", "NeasEnergy.AngularClient\TestCompany.AngularClient.csproj", "{0E9461CD-94D0-4750-9A6C-3A688CA083BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +30,6 @@ Global
 		{EDE2CD68-9D86-46C5-8583-C79DF6184C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDE2CD68-9D86-46C5-8583-C79DF6184C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDE2CD68-9D86-46C5-8583-C79DF6184C59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0549C808-9D24-42F9-AFD1-93DE702E28EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0549C808-9D24-42F9-AFD1-93DE702E28EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0549C808-9D24-42F9-AFD1-93DE702E28EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0549C808-9D24-42F9-AFD1-93DE702E28EB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{56971B23-23B4-4D33-9481-4C0E11F850AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56971B23-23B4-4D33-9481-4C0E11F850AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56971B23-23B4-4D33-9481-4C0E11F850AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,6 +50,10 @@ Global
 		{A0008720-9C7D-4DD3-85A9-7A62D188B352}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0008720-9C7D-4DD3-85A9-7A62D188B352}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0008720-9C7D-4DD3-85A9-7A62D188B352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9461CD-94D0-4750-9A6C-3A688CA083BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9461CD-94D0-4750-9A6C-3A688CA083BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9461CD-94D0-4750-9A6C-3A688CA083BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9461CD-94D0-4750-9A6C-3A688CA083BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

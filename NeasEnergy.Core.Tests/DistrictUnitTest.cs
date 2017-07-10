@@ -2,9 +2,9 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NeasEnergy.Core.DataLayer.Providers;
+using TestCompany.Core.DataLayer.Providers;
 
-namespace NeasEnergy.Core.Tests
+namespace TestCompany.Core.Tests
 {
     /// <summary>
     /// Summary description for DistrictUnitTest

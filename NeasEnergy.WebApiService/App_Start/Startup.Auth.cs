@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using NeasEnergy.WebApiService.Providers;
-using NeasEnergy.WebApiService.Models;
+using TestCompany.WebApiService.Providers;
+using TestCompany.WebApiService.Models;
 
-namespace NeasEnergy.WebApiService
+namespace TestCompany.WebApiService
 {
     public partial class Startup
     {

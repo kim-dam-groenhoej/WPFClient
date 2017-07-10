@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace NeasEnergy.WebApiService.Models
+namespace TestCompany.WebApiService.Models
 {
     // Models used as parameters to AccountController actions.
 
