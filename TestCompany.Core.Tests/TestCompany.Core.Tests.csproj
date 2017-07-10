@@ -68,7 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NeasEnergy.Core\TestCompany.Core.csproj">
+    <ProjectReference Include="..\TestCompany.Core\TestCompany.Core.csproj">
       <Project>{56971b23-23b4-4d33-9481-4c0e11f850ad}</Project>
       <Name>TestCompany.Core</Name>
     </ProjectReference>

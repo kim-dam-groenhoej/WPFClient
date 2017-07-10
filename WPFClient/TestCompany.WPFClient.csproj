@@ -122,7 +122,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NeasEnergy.Core.Client\TestCompany.Core.Client.csproj">
+    <ProjectReference Include="..\TestCompany.Core.Client\TestCompany.Core.Client.csproj">
       <Project>{A0008720-9C7D-4DD3-85A9-7A62D188B352}</Project>
       <Name>TestCompany.Core.Client</Name>
     </ProjectReference>

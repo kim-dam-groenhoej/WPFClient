@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
@@ -8,17 +8,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WPFClient", "WP
 		{B11047FB-A056-45E1-954C-5F7A22EA3101} = {B11047FB-A056-45E1-954C-5F7A22EA3101}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core", "NeasEnergy.Core\TestCompany.Core.csproj", "{56971B23-23B4-4D33-9481-4C0E11F850AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core", "TestCompany.Core\TestCompany.Core.csproj", "{56971B23-23B4-4D33-9481-4C0E11F850AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core.Tests", "NeasEnergy.Core.Tests\TestCompany.Core.Tests.csproj", "{EB6E126D-5A6D-47B3-A42F-AE918A352789}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core.Tests", "TestCompany.Core.Tests\TestCompany.Core.Tests.csproj", "{EB6E126D-5A6D-47B3-A42F-AE918A352789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WebApiService", "NeasEnergy.WebApiService\TestCompany.WebApiService.csproj", "{B11047FB-A056-45E1-954C-5F7A22EA3101}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WebApiService", "TestCompany.WebApiService\TestCompany.WebApiService.csproj", "{B11047FB-A056-45E1-954C-5F7A22EA3101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WebApiService.Tests", "NeasEnergy.WebApiService.Tests\TestCompany.WebApiService.Tests.csproj", "{E52F24C9-3DE8-44EC-92C0-81EA5A8862B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.WebApiService.Tests", "TestCompany.WebApiService.Tests\TestCompany.WebApiService.Tests.csproj", "{E52F24C9-3DE8-44EC-92C0-81EA5A8862B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core.Client", "NeasEnergy.Core.Client\TestCompany.Core.Client.csproj", "{A0008720-9C7D-4DD3-85A9-7A62D188B352}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.Core.Client", "TestCompany.Core.Client\TestCompany.Core.Client.csproj", "{A0008720-9C7D-4DD3-85A9-7A62D188B352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.AngularClient", "NeasEnergy.AngularClient\TestCompany.AngularClient.csproj", "{0E9461CD-94D0-4750-9A6C-3A688CA083BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCompany.AngularClient", "TestCompany.AngularClient\TestCompany.AngularClient.csproj", "{0E9461CD-94D0-4750-9A6C-3A688CA083BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

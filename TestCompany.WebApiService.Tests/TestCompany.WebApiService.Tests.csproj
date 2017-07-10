@@ -100,7 +100,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NeasEnergy.WebApiService\TestCompany.WebApiService.csproj">
+    <ProjectReference Include="..\TestCompany.WebApiService\TestCompany.WebApiService.csproj">
       <Project>{B11047FB-A056-45E1-954C-5F7A22EA3101}</Project>
       <Name>TestCompany.WebApiService</Name>
     </ProjectReference>
